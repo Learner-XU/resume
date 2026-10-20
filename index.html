@@ -324,7 +324,7 @@
       <div class="readme-body">
 
         <h2>👨‍💻 关于我</h2>
-        <p>5 年金融科技开发经验，AI 应用开发方向。在万得先后独立交付<strong>商品期货实时异动监控平台</strong>（AI Agent 自动解读）、<strong>WindSearch AI 中台</strong>（30+ 接口承载 3 条业务线）与<strong>期权衍生品实时计算引擎</strong>（31 万+ 合约、p99≤1ms），兼具 LLM 工程化能力（MCP 数据接口、Prompt 工程、Langfuse 可观测、Agent 调用防护）与 C++/Linux 高并发功底（事件驱动、多进程分片、低延迟流水线）。深耕期货期权与实时行情领域，持有证券从业资格证。</p>
+        <p>5 年金融科技开发经验，AI 应用开发方向。在万得先后独立交付<strong>商品期货实时异动监控平台</strong>（AI Agent 自动解读）、<strong>WindSearch AI 中台</strong>（30+ 接口承载 3 条业务线）与<strong>期权衍生品实时计算引擎</strong>（31 万+ 合约、p99≤1ms），并负责 <strong>Cosmos 套利分析后台计算服务</strong>的历史计算管线（6 市场、36 分片、上万套利对），兼具 LLM 工程化能力（MCP 数据接口、Prompt 工程、Langfuse 可观测、Agent 调用防护）与 C++/Linux 高并发功底（事件驱动、多进程分片、低延迟流水线）。深耕期货期权与实时行情领域，持有证券从业资格证。</p>
 
         <h2>🚀 核心项目</h2>
 
@@ -388,6 +388,24 @@
         </div>
 
         <h2>📋 项目详情</h2>
+
+        <details class="proj">
+          <summary>
+            <svg class="octicon chev" width="12" height="12" viewBox="0 0 16 16"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06Z"></path></svg>
+            Cosmos 套利分析后台计算服务（Wind.Cosmos.SPAN.Calculator）
+            <span class="proj-time">2023 – 2024 · 核心开发</span>
+          </summary>
+          <div class="proj-body">
+            <ul>
+              <li>面向 WFT/Mac 终端套利分析功能的后台计算服务：接收自定义品种配置服务的组播指令（新建/修改/删除/重算/重命名），为用户自定义套利组合计算历史 K 线与实时走势，供前端订阅展示；覆盖 6 个市场、36 个数据分片，活跃套利对上万。</li>
+              <li><strong>端到端闭环</strong>：前端操作→配置服务组播指令→本服务经 Kafka 消费组接收→计算（历史回补＋盘中实时）→结果存储与转发→前端订阅展示，配置驱动、指令计算、订阅分发全链路闭环。</li>
+              <li><strong>分层架构</strong>：BSBasic（反射工厂）→ BSFramework（Actor 风格事件内核：Handler 绑线程、三级优先级队列、TOPIC_LEAD 串行分发）→ BSEngine（TDF 行情/历史数据/本地存储引擎）→ CX 计算公共层（13 类生命周期事件＋24 钩子模板方法管线），业务以 .so 插件反射装配。</li>
+              <li><strong>本人职责</strong>：CX 公共层历史计算管线与 CT 历史计算实现——日线/分钟/分钟 K 三周期回补、多腿公式计算、跨市场交易时段对齐（时区/夏令时）、多汇率源换算。</li>
+              <li><strong>Kafka offset 重放</strong>：基于消费组实现配置指令的可靠消费与位移重置重放，重算与崩溃恢复即指令重放，依赖历史计算幂等可复现特性，回放即恢复。</li>
+            </ul>
+            <div class="stack-line"><b>技术栈：</b>C++14 · Linux · Kafka · Redis · TDF 行情</div>
+          </div>
+        </details>
 
         <details class="proj" open>
           <summary>
@@ -473,7 +491,7 @@
         <div class="skill-block">
           <h3>后端开发</h3>
           <div class="topics">
-            <span class="topic">Python</span><span class="topic">FastAPI</span><span class="topic">APScheduler</span><span class="topic">Redis</span><span class="topic">MySQL</span><span class="topic">C++11/14/17</span><span class="topic">epoll</span><span class="topic">Libevent</span><span class="topic">Reactor</span><span class="topic">Intel TBB</span><span class="topic">Protobuf</span><span class="topic">RESTful</span>
+            <span class="topic">Python</span><span class="topic">FastAPI</span><span class="topic">APScheduler</span><span class="topic">Redis</span><span class="topic">MySQL</span><span class="topic">C++11/14/17</span><span class="topic">epoll</span><span class="topic">Libevent</span><span class="topic">Reactor</span><span class="topic">Intel TBB</span><span class="topic">Kafka</span><span class="topic">Protobuf</span><span class="topic">RESTful</span>
           </div>
         </div>
         <div class="skill-block">
