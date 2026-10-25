@@ -212,24 +212,6 @@
   .skill-block p{font-size:13px;color:var(--fg-muted);}
   .skill-block p + p{margin-top:4px;}
 
-  /* 贡献图（装饰性热力格） */
-  .heat{display:flex;gap:3px;margin-top:8px;flex-wrap:wrap;}
-  .heat .col{display:flex;flex-direction:column;gap:3px;}
-  .heat .cell{width:10px;height:10px;border-radius:2px;background:var(--bg-subtle);border:1px solid var(--border-muted);}
-  @media (prefers-color-scheme: light){
-    .heat .l1{background:#9be9a8;border-color:#9be9a8;}
-    .heat .l2{background:#40c463;border-color:#40c463;}
-    .heat .l3{background:#30a14e;border-color:#30a14e;}
-    .heat .l4{background:#216e39;border-color:#216e39;}
-  }
-  @media (prefers-color-scheme: dark){
-    .heat .l1{background:#033a16;border-color:#033a16;}
-    .heat .l2{background:#196c2e;border-color:#196c2e;}
-    .heat .l3{background:#2ea043;border-color:#2ea043;}
-    .heat .l4{background:#56d364;border-color:#56d364;}
-  }
-  .heat-note{font-size:12px;color:var(--fg-subtle);margin-top:6px;}
-
   footer.site{
     border-top:1px solid var(--border-default);
     margin-top:32px;padding:24px 16px;
@@ -298,24 +280,13 @@
     </div>
 
     <div class="card">
-      <div class="who" style="padding-bottom:12px;">
-        <div style="font-weight:600;font-size:14px;margin-bottom:4px;">Highlights</div>
-        <ul style="padding-left:18px;font-size:13px;color:var(--fg-muted);display:flex;flex-direction:column;gap:6px;">
-          <li>AI Agent 生产落地，调用成功率 96%</li>
-          <li>31万+ 合约实时计算，p99 ≤ 1ms</li>
-          <li>9 类 MCP 数据接口设计者</li>
-          <li>全部项目生产部署稳定运行</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="card">
       <div class="who" style="padding-bottom:14px;">
-        <div style="font-weight:600;font-size:14px;margin-bottom:4px;">
-          5年 · 万得（Wind）持续交付
+        <div style="font-weight:600;font-size:14px;margin-bottom:8px;">任职与交付</div>
+        <div style="font-size:13px;color:var(--fg-muted);display:flex;flex-direction:column;gap:6px;">
+          <span>万得（Wind Info）· 2021.06 至今</span>
+          <span>5 年 · 5 个项目均生产部署稳定运行</span>
+          <span>方向：LLM 工程化 × C++ 高并发</span>
         </div>
-        <div class="heat" id="heat"></div>
-        <div class="heat-note">2021.06 至今 · 4 条生产级产品线</div>
       </div>
     </div>
   </aside>
@@ -329,10 +300,10 @@
       </div>
       <div class="readme-body">
 
-        <h2>👨‍💻 关于我</h2>
+        <h2>关于我</h2>
         <p>5 年金融科技开发经验，AI 应用开发方向。在万得先后独立交付<strong>商品期货实时异动监控平台</strong>（AI Agent 自动解读）、<strong>WindSearch AI 中台</strong>（30+ 接口承载 3 条业务线）与<strong>期权衍生品实时计算引擎</strong>（31 万+ 合约、p99≤1ms），并负责 <strong>Cosmos 套利分析后台计算服务</strong>的历史计算管线（6 市场、36 分片、上万套利对），兼具 LLM 工程化能力（MCP 数据接口、Prompt 工程、Langfuse 可观测、Agent 调用防护）与 C++/Linux 高并发功底（事件驱动、多进程分片、低延迟流水线）。深耕期货期权与实时行情领域，持有证券从业资格证。</p>
 
-        <h2>🚀 核心项目</h2>
+        <h2>核心项目</h2>
 
         <div class="pinned-grid">
           <div class="card repo-card">
@@ -346,7 +317,7 @@
             </div>
             <div class="repo-meta">
               <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-              <span>⭐ 生产部署</span>
+              <span>2026.04 – 至今</span>
             </div>
           </div>
           <div class="card repo-card">
@@ -360,7 +331,7 @@
             </div>
             <div class="repo-meta">
               <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-              <span>⭐ 生产部署</span>
+              <span>2023 – 至今</span>
             </div>
           </div>
           <div class="card repo-card">
@@ -374,7 +345,7 @@
             </div>
             <div class="repo-meta">
               <span><span class="lang-dot" style="background:#f34b7d"></span>C++</span>
-              <span>⭐ 生产部署</span>
+              <span>2024 – 2026</span>
             </div>
           </div>
           <div class="card repo-card">
@@ -388,12 +359,12 @@
             </div>
             <div class="repo-meta">
               <span><span class="lang-dot" style="background:#f34b7d"></span>C++</span>
-              <span>⭐ 生产部署</span>
+              <span>2022 – 2023</span>
             </div>
           </div>
         </div>
 
-        <h2>📋 项目详情</h2>
+        <h2>项目详情</h2>
 
         <details class="proj">
           <summary>
@@ -486,7 +457,7 @@
           </div>
         </details>
 
-        <h2>🛠 技能栈</h2>
+        <h2>技能</h2>
 
         <div class="skill-block">
           <h3>AI 应用工程化</h3>
@@ -511,7 +482,7 @@
           <p>期货期权衍生品定价（BS/BAW、希腊字母、隐含波动率）· 实时行情处理 · 商品期货基本面量化（基差、季节性、套利、进口成本）· 证券从业资格</p>
         </div>
 
-        <h2>🎓 教育经历</h2>
+        <h2>教育经历</h2>
         <ul>
           <li><strong>华东理工大学</strong>（211 工程）· 机械工程 · 硕士 · 2018.09 – 2021.06<br><span style="color:var(--fg-muted);font-size:13px;">“华为杯”第十六届中国研究生数学建模竞赛国家二等奖 · 校一等奖学金 · 校优秀毕业生</span></li>
           <li><strong>南京工程学院</strong> · 机械设计制造及其自动化 · 本科 · 2012.09 – 2016.06<br><span style="color:var(--fg-muted);font-size:13px;">GPA 3.5/4.0（专业前 5%）· 校一等奖学金（3 次）</span></li>
@@ -523,30 +494,8 @@
 </div>
 
 <footer class="site">
-  <svg class="octicon octicon-mark" width="24" height="24" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
-  <div style="margin-top:8px;">徐海涛 · 简历页 · 内容与 <a href="https://github.com/Learner-XU">Learner-XU</a> 同步</div>
+  <div>徐海涛 · <a href="https://github.com/Learner-XU">github.com/Learner-XU</a></div>
 </footer>
-
-<script>
-  // 生成装饰性贡献热力图（52 周 × 7 天，确定性伪随机）
-  (function(){
-    var heat = document.getElementById('heat');
-    if(!heat) return;
-    var seed = 42;
-    function rnd(){ seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
-    var html = '';
-    for(var w = 0; w < 52; w++){
-      html += '<div class="col">';
-      for(var d = 0; d < 7; d++){
-        var r = rnd();
-        var lvl = r < 0.42 ? '' : r < 0.62 ? 'l1' : r < 0.8 ? 'l2' : r < 0.93 ? 'l3' : 'l4';
-        html += '<div class="cell ' + lvl + '"></div>';
-      }
-      html += '</div>';
-    }
-    heat.innerHTML = html;
-  })();
-</script>
 
 </body>
 </html>
