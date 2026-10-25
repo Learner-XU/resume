@@ -97,6 +97,12 @@
   .avatar-row{padding:16px 16px 0;}
   .avatar{
     width:100%;aspect-ratio:1;border-radius:50%;
+    object-fit:cover;object-position:center 20%;
+    border:1px solid var(--border-default);
+    display:block;
+  }
+  .avatar-fallback{
+    width:100%;aspect-ratio:1;border-radius:50%;
     background:linear-gradient(135deg,#0969da 0%,#8250df 100%);
     display:flex;align-items:center;justify-content:center;
     color:#fff;font-size:64px;font-weight:600;letter-spacing:2px;
@@ -252,7 +258,7 @@
   <aside class="sidebar">
     <div class="card">
       <div class="avatar-row">
-        <div class="avatar" aria-label="徐海涛头像占位">徐</div>
+        <img class="avatar" src="photo.jpg" alt="徐海涛" onerror="this.outerHTML='<div class=\'avatar-fallback\' aria-label=\'徐海涛头像占位\'>徐</div>'">
       </div>
       <div class="who">
         <h1>徐海涛</h1>
